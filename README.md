@@ -29,6 +29,7 @@ Options:
 - beforeOpen: Function - Action to be execute/verify if have open or not to edit cell. Have return true to be able edit
 - maxLength: String|Integer - Maxlength of input
 - iconEdit: String - If present, will be show a icon on right of the input to indicate it is editing. To not show, pass empty value
+- iconEditStyle: String - The stylesheet of icon showed. PS: Because different versions of FontAwesome, if necessary modify this parameter
  
  
  ![arjEditTable01](https://user-images.githubusercontent.com/14263768/59794253-8d0a4e00-92a6-11e9-8c83-9054100c8c94.png)
