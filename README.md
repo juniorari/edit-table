@@ -10,7 +10,7 @@ Use:
 and on script tag:
 
 ``` 
-$('td').arjEditTable({
+$('td').EditTable({
   beforeOpen: function($td, ev) {
    console.log($td.text())
    return true;
