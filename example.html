@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exemplo de uso EditTable</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="edit-table.js"></script>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <th>Célula 1</th>
+            <th>Célula 2</th>
+            <th>Célula 3</th>
+            <th>Célula 4</th>
+        </tr>
+        <tr>
+            <td>Edite esta célula 1</td>
+            <td>Edite esta célula 2</td>
+            <td>Edite esta célula 3</td>
+            <td>Edite esta célula 4</td>
+        </tr>
+        <tr>
+            <td>Edite esta célula 5</td>
+            <td>Edite esta célula 6</td>
+            <td>Edite esta célula 7</td>
+            <td>Edite esta célula 8</td>
+        </tr>
+        <tr>
+            <td>Edite esta célula 9</td>
+            <td>Edite esta célula 10</td>
+            <td>Edite esta célula 11</td>
+            <td>Edite esta célula 12</td>
+        </tr>
+        <tr>
+            <td>Edite esta célula 13</td>
+            <td>Edite esta célula 14</td>
+            <td>Edite esta célula 15</td>
+            <td>Edite esta célula 16</td>
+        </tr>
+        <tr>
+            <td>Edite esta célula 17</td>
+            <td>Edite esta célula 18</td>
+            <td>Edite esta célula 19</td>
+            <td>Edite esta célula 20</td>
+        </tr>
+        <tr>
+            <td>Edite esta célula 21</td>
+            <td>Edite esta célula 22</td>
+            <td>Edite esta célula 23</td>
+            <td>Edite esta célula 24</td>
+        </tr>
+    </table>
+    <script>
+        $('td').EditTable({
+            beforeOpen: function($td, ev) {
+                console.log($td.text())
+                return true;
+            },
+            afterChange: function($td, oldVal, newVal) {
+                console.log(oldVal, newVal)
+            }
+        });
+    </script>
+</body>
+</html>
