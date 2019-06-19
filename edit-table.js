@@ -47,6 +47,7 @@
  *  - beforeOpen: Function - Action to be execute/verify if have open or not to edit cell. Have return true to be able edit
  *  - maxLength: String|Integer - Maxlength of input
  *  - iconEdit: String - If present, will be show a icon on right of the input to indicate it is editing. To not show, pass empty value
+ *  - iconEditStyle: String - The stylesheet of icon showed. PS: Because different versions of FontAwesome, if necessary modify this parameter
  *
  *
  * Bonus: $('element').setCursorPosition(pos)
@@ -67,6 +68,7 @@
             'beforeOpen': function () {return true},
             'maxLength': 50,
             'iconEdit': 'fa fa-edit',
+            'iconEditStyle': 'right: 5px; position: absolute; top: 10px; color: #424242;',
         }, options);
         
         let objName = 'ajr-edit-table';
@@ -76,7 +78,7 @@
         if (settings.iconEdit !== '') {
             $faEdit = $('<i/>').attr({class: settings.iconEdit + " " + objName + "__faEdit"});
             let sheet = document.createElement('style');
-            sheet.innerHTML = "." + objName + "__faEdit {right: 5px; position: absolute; top: 10px; color: #424242;}";
+            sheet.innerHTML = "." + objName + "__faEdit {" + settings.iconEditStyle + "}";
             document.body.appendChild(sheet);
         }
         
@@ -96,7 +98,7 @@
             $this.addClass(settings.classTd);
             
             let $input = $('<input/>').attr({
-                'class': settings.classInput,
+                class: settings.classInput,
                 type: 'text',
                 id: 'input_' + objName + '_' + randomId,
                 value: oldVal,

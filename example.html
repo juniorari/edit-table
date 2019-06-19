@@ -3,11 +3,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Exemplo de uso EditTable</title>
+    <!-- <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="edit-table.js"></script>
 </head>
 <body>
-    <table width="100%">
+    <table width="100%" border="1">
         <tr>
             <th>Célula 1</th>
             <th>Célula 2</th>
@@ -53,6 +55,8 @@
     </table>
     <script>
         $('td').EditTable({
+            iconEdit: 'icon-edit',
+            iconEditStyle: 'right: 18px; position: relative; top: 2px;',
             beforeOpen: function($td, ev) {
                 console.log($td.text())
                 return true;
