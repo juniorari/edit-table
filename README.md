@@ -1,4 +1,4 @@
-# arjEditTable
+# edit-table
 
 A simple edit of a cell in a table
 
